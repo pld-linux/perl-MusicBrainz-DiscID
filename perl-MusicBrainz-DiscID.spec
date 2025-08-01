@@ -13,6 +13,7 @@ License:	MIT
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/MusicBrainz/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6579d43d270c965563f84fd5ffe0dde5
+Patch0:		params.patch
 URL:		https://metacpan.org/dist/MusicBrainz-DiscID
 BuildRequires:	libdiscid-devel >= 0.2.2
 BuildRequires:	perl-ExtUtils-MakeMaker
@@ -28,7 +29,7 @@ Requires:	libdiscid >= 0.2.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-MusicBrainz::DiscID is a class to calculate a MusicBrainz DiscID 
+MusicBrainz::DiscID is a class to calculate a MusicBrainz DiscID
 from an audio CD in the drive. The coding style is slightly different
 to the C interface to libdiscid, because it makes use of perl's Object
 Oriented functionality.
@@ -41,6 +42,7 @@ obiektowo.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch -P0 -p1
 
 %build
 %{__perl} Makefile.PL \
