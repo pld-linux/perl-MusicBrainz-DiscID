@@ -8,7 +8,7 @@ Summary:	MusicBrainz::DiscID - Perl interface for the MusicBrainz libdiscid libr
 Summary(pl.UTF-8):	MusicBrainz::DiscID - perlowy interfejs do biblioteki MusicBrainz libdiscid
 Name:		perl-MusicBrainz-DiscID
 Version:	0.06
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/MusicBrainz/%{pdir}-%{pnam}-%{version}.tar.gz
